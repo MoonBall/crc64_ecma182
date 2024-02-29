@@ -75,6 +75,10 @@ void crc64_init();
  */
 uint64_t crc64(uint64_t crc, void* buf, size_t len);
 
+/* Return the CRC-64 of two sequential blocks, where crc1 is the CRC-64 of the
+   first block, crc2 is the CRC-64 of the second block, and len2 is the length
+   of the second block. */
+uint64_t crc64_combine(uint64_t crc1, uint64_t crc2, uintmax_t len2);
 }
 
 #endif

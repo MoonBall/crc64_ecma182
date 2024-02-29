@@ -1,20 +1,20 @@
 # CRC64 ECMA182
 
-[![Build Status](https://travis-ci.org/souche-koumakan/crc64_ecma182.svg?branch=master)](https://travis-ci.org/souche-koumakan/crc64_ecma182)
-[![Coverage Status](https://img.shields.io/coveralls/souche-koumakan/crc64_ecma182.svg)](https://coveralls.io/r/souche-koumakan/crc64_ecma182)
-[![crc64-ecma182](http://img.shields.io/npm/v/crc64-ecma182.svg)](https://www.npmjs.org/package/crc64-ecma182)
-[![crc64-ecma182](http://img.shields.io/npm/dm/crc64-ecma182.svg)](https://www.npmjs.org/package/crc64-ecma182)
+[![Build Status](https://travis-ci.org/MoonBall/crc64_ecma182.svg?branch=master)](https://travis-ci.org/MoonBall/crc64_ecma182)
+[![Coverage Status](https://img.shields.io/coveralls/MoonBall/crc64_ecma182.svg)](https://coveralls.io/r/MoonBall/crc64_ecma182)
+[![crc64-ecma182](http://img.shields.io/npm/v/tos-crc64-js.svg)](https://www.npmjs.org/package/crc64-ecma182)
+[![crc64-ecma182](http://img.shields.io/npm/dm/tos-crc64-js.svg)](https://www.npmjs.org/package/crc64-ecma182)
 [![License](https://img.shields.io/npm/l/crc64-ecma182.svg?style=flat)](https://www.npmjs.org/package/crc64-ecma182)
-[![Dependency Status](https://david-dm.org/souche-koumakan/crc64_ecma182.svg)](https://david-dm.org/souche-koumakan/crc64_ecma182)
+[![Dependency Status](https://david-dm.org/MoonBall/crc64_ecma182.svg)](https://david-dm.org/MoonBall/crc64_ecma182)
 
-[![NPM](https://nodei.co/npm/crc64-ecma182.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/crc64-ecma182/) [![NPM](https://nodei.co/npm-dl/crc64-ecma182.png?months=6&height=2)](https://nodei.co/npm/crc64-ecma182/)
+[![NPM](https://nodei.co/npm/tos-crc64-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/crc64-ecma182/) [![NPM](https://nodei.co/npm-dl/crc64-ecma182.png?months=6&height=2)](https://nodei.co/npm/crc64-ecma182/)
 
-> This package can be used as verify [Ali-OSS](https://help.aliyun.com/document_detail/43394.html) file.
+> This package can be used as verify [downloading TOS](https://www.volcengine.com/docs/6349/136741) file and [uploading TOS](https://www.volcengine.com/docs/6349/136740#%E9%80%9A%E8%BF%87crc64) file.
 
 ## Installation
 
 ```sh
-$ npm install --save crc64-ecma182
+$ npm install --save tos-crc64-js
 ```
 
 ## Usage
@@ -50,22 +50,21 @@ const ret4 = crc64.crc64(new Buffer("123456789"), Buffer.alloc(8));
 You can calculate the CRC64-ECMA182 value for a file:
 
 ```js
-crc64.crc64File(filename[, toString], callback);
+await crc64.crc64File(filename[, toString]);
 ```
 
 + Parameters:
     + `filename`: the file's name that to be calculated;
     + `toString`: to decide wether the result should be a buffer or a UInt64 string, default to `true`; (**optional**)
-    + `callback`: the callback function which receives two arguments `err` and `ret`.
++ Returns: `Promise<string | Buffer>`
 
 ```js
-crc64.crc64File(path.join(__dirname, "pic.png"), function(err, ret) {
-    console.log(err, ret);
+const ret = await crc64.crc64File(path.join(__dirname, "pic.png"));
+console.log(ret);
 
-    // a possible result:
-    //
-    //   undefined 5178350320981835788
-});
+// a possible result:
+//
+//   5178350320981835788
 ```
 
 ### Convert Result Buffer to String

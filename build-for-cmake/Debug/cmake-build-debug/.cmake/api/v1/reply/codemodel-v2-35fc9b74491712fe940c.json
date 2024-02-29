@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "crc64_ecma182",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "crc64_ecma182::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crc64_ecma182-Debug-ad656d13687aca726a79.json",
+					"name" : "crc64_ecma182",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crc64_ecma182_base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crc64_ecma182_base-Debug-636f135deab52f6fcb6c.json",
+					"name" : "crc64_ecma182_base",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/bytedance/git-source/github.com/MoonBall/crc64_ecma182/build-for-cmake/Debug/cmake-build-debug",
+		"source" : "/Users/bytedance/git-source/github.com/MoonBall/crc64_ecma182/build-for-cmake/Debug"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

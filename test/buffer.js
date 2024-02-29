@@ -13,7 +13,7 @@ const crc64 = require('../');
 
 describe('buffer test', function() {
     const retString = '11051210869376104954';
-    const retBuffer = new Buffer([ 0xfa, 0x39, 0x19, 0xdf, 0xbb, 0xc9, 0x5d, 0x99 ]);
+    const retBuffer = Buffer.from([ 0xfa, 0x39, 0x19, 0xdf, 0xbb, 0xc9, 0x5d, 0x99 ]);
 
     it('check \'123456789\'', function() {
         const ret = crc64.crc64('123456789');
@@ -24,7 +24,7 @@ describe('buffer test', function() {
     });
 
     it('check Buffer(\'123456789\')', function() {
-        const ret = crc64.crc64(new Buffer('123456789'));
+        const ret = crc64.crc64(Buffer.from('123456789'));
         ret.should.be.instanceof(Buffer);
         crc64.toUInt64String(ret).should.be.equal(retString);
         ret.length.should.be.equal(retBuffer.length);
@@ -38,16 +38,16 @@ describe('buffer test', function() {
         crc64.toUInt64String(ret).should.be.equal(retString);
         ret.length.should.be.equal(retBuffer.length);
         ret.compare(retBuffer).should.be.equal(0);
-        assert.strictEqual(ret, prev);
+        prev.compare(Buffer.alloc(8)).should.be.equal(0);
     });
 
     it('check Buffer(\'123456789\') with previous value', function() {
         const prev = Buffer.alloc(8);
-        const ret = crc64.crc64(new Buffer('123456789'), prev);
+        const ret = crc64.crc64(Buffer.from('123456789'), prev);
         ret.should.be.instanceof(Buffer);
         crc64.toUInt64String(ret).should.be.equal(retString);
         ret.length.should.be.equal(retBuffer.length);
         ret.compare(retBuffer).should.be.equal(0);
-        assert.strictEqual(ret, prev);
+        prev.compare(Buffer.alloc(8)).should.be.equal(0);
     });
 });

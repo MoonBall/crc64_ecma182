@@ -1,25 +1,26 @@
 {
-  "name": "crc64-ecma182",
-  "version": "1.0.0",
+  "name": "tos-crc64-js",
+  "version": "0.0.1-alpha.1",
   "description": "Implement of CRC64-ECMA182 for Node.js",
   "main": "crc64_ecma182.js",
   "scripts": {
+    "gen-cmake": "node-gyp configure -- -f cmake && cp -rf build build-for-cmake",
     "test": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/souche-koumakan/crc64.js.git"
+    "url": "git+https://github.com/MoonBall/crc64_ecma182.git"
   },
   "keywords": [
     "crc64-ecma182",
     "crc64"
   ],
-  "author": "XadillaX <i@2333.moe>",
+  "author": "MoonBall <gangc.cxy@foxmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/souche-koumakan/crc64_ecma182/issues"
+    "url": "https://github.com/MoonBall/crc64_ecma182/issues"
   },
-  "homepage": "https://github.com/souche-koumakan/crc64_ecma182#readme",
+  "homepage": "https://github.com/MoonBall/crc64_ecma182#readme",
   "dependencies": {
     "nan": "^2.7.0"
   },

@@ -1,0 +1,188 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "crc64_ecma182_base.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"set_target_properties",
+			"set_property"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+				},
+				{
+					"fragment" : "-O0 -gdwarf-2 -mmacosx-version-min=10.15 -arch arm64 -Wall -Wendif-labels -W -Wno-unused-parameter -std=gnu++17 -stdlib=libc++ -fno-rtti -fno-exceptions -fno-strict-aliasing "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "NODE_GYP_MODULE_NAME=crc64_ecma182_base"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "OPENSSL_NO_PINSHARED"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "OPENSSL_THREADS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "USING_UV_SHARED=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "USING_V8_SHARED=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "V8_DEPRECATION_WARNINGS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "V8_DEPRECATION_WARNINGS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "V8_ENABLE_CHECKS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "V8_IMMINENT_DEPRECATION_WARNINGS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_DARWIN_USE_64_BIT_INODE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_FILE_OFFSET_BITS=64"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_GLIBCXX_USE_CXX11_ABI=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_LARGEFILE_SOURCE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/include/node"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/deps/openssl/config"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/deps/openssl/openssl/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/deps/uv/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/deps/zlib"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/bytedance/Library/Caches/node-gyp/18.19.1/deps/v8/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "crc64_ecma182_base::@6890427a1f51a3e7e1df",
+	"name" : "crc64_ecma182_base",
+	"nameOnDisk" : "crc64_ecma182_base.a",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bytedance/git-source/github.com/MoonBall/crc64_ecma182/src/crc64_ecma_182.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
